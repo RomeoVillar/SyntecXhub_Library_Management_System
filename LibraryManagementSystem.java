@@ -19,7 +19,7 @@ public class LibraryManagementSystem {
             System.out.print("Enter your choice: ");
 
             try {
-                choice = Integer.parseInt(sc.nextLine());
+                choice = Integer.parseInt(sc.nextLine().trim());
 
                 switch (choice) {
                     case 1:
@@ -39,15 +39,21 @@ public class LibraryManagementSystem {
                         break;
 
                     case 5:
-                        System.out.println("Thank you for using the system!");
+                        System.out.println(
+                                "Thank you for using the system!"
+                        );
                         break;
 
                     default:
-                        System.out.println("Invalid choice. Choose 1-5.");
+                        System.out.println(
+                                "Invalid choice. Please choose 1-5."
+                        );
                 }
 
             } catch (NumberFormatException e) {
-                System.out.println("Please enter a valid number.");
+                System.out.println(
+                        "Invalid input. Please enter a number from 1 to 5."
+                );
             }
         }
 
